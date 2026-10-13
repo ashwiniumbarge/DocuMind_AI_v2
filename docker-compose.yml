@@ -1,0 +1,15 @@
+services:
+  documind:
+    build: .
+    image: documind-ai
+    container_name: documind-ai
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env          # must contain GOOGLE_API_KEY=your_key
+    volumes:          # keep data when the container is recreated
+      - ./uploads:/app/uploads
+      - ./vectorstores:/app/vectorstores
+      - ./database:/app/database
+      - ./logs:/app/logs
+    restart: unless-stopped

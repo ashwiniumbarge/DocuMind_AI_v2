@@ -1,0 +1,14 @@
+# DocuMind AI v2 - runtime dependencies
+# (torch is installed separately in the Dockerfile as the CPU-only build)
+streamlit>=1.40
+google-genai>=1.0
+langchain-core>=0.3
+langchain-community>=0.3
+langchain-huggingface>=0.1
+langchain-text-splitters>=0.3
+faiss-cpu>=1.8
+sentence-transformers>=3.0
+rank-bm25>=0.2.2
+pypdf>=5.0
+bcrypt>=4.1
+python-dotenv>=1.0
